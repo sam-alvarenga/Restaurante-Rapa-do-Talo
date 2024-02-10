@@ -1,12 +1,13 @@
 /* ============== Global ================ */
-*{
-    --vine:#a30404;
-    --yellow:#fed40e;
+* {
+    --vine: #a30404;
+    --yellow: #fed40e;
     --gray: #e5e5e5;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-size: 93.75%; /* 100% - 16px | 93.75% - 15px */
+    font-size: 93.75%;
+    /* 100% - 16px | 93.75% - 15px */
 }
 
 html {
@@ -31,11 +32,112 @@ body {
 }
 
 /* em = sempre será relativa ao tamanho da fonte definida no elemento pai, exemplo: 1em ele irá colocar uma vez o tamanho do emento pai, caso o pai não tenha um tamanho definido ele irá considerar o padrão do navegador que será 16px
-rem= sempre será relativa a fonte definida no elemento :root, caso não tenha fonte definida no root irá pegar o padrão do navegador que será 16px */
+rem = sempre será relativa a fonte definida no elemento :root, caso não tenha fonte definida no root irá pegar o padrão do navegador que será 16px */
+
+/* ============== Links & Buttons==================*/
+
+a {
+    text-decoration: none;
+}
+
+header ul li a {
+    padding: 10px;
+    color: var(--vine);
+    transition: all 0.3s;
+}
+
+header ul li a.item-menu:hover {
+    background: var(--vine);
+    color: var(--yellow)
+}
+
+/* ================== Header ==================== */
+
+header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header ul {
+    background: var(--yellow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2rem;
+    padding: 12px 30px;
+    height: 55px;
+    min-width: 800px;
+}
+
+header ul li {
+    list-style: none;
+    font-family: "Rum Raisin", sans-serif;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+}
+/* ============== Banner =================== */ 
+.slider {
+    display: flex;
+    transition: all ease .4s;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 75vh;
+}
+
+.img-titulo-banner img {
+    min-width: 400px;
+}
+.description-banner {
+    position: relative;
+    top:-30px;
+    max-width: 380px;
+
+}
+
+.left-banner p{
+    line-height: 44px;
+    letter-spacing: 0.8px;
+    color:#fff;
+    font-family: "Rum Raisin",  sans-serif;
+}
+
+.description-banner p:first-child {
+    font-family: "Rum Raisin", sans-serif;
+    font-size: 1.9rem;
+}
+
+button {
+    background: var(--yellow);
+    cursor: pointer;
+    padding: 10px 35px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.87);
+    color: var(--vine);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-family: "Rum Raisin", sans-serif;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #fff;
+    color: var(--vine);
+    padding: 10px 50px;
+}
 
 .container {
     width: min(90vw, 800vw);
-    padding-top: 4em;
+    padding-top: 4rem;
     margin: auto;
 }
 
@@ -55,7 +157,7 @@ rem= sempre será relativa a fonte definida no elemento :root, caso não tenha f
     flex-direction: row;
 }
 
-.text-center{
+.text-center {
     text-align: center;
 }
 
@@ -67,4 +169,3 @@ rem= sempre será relativa a fonte definida no elemento :root, caso não tenha f
     font-size: 5em;
     color: var(--yellow);
 }
-
